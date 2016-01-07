@@ -11,6 +11,14 @@ namespace TiedostoTallennusHarjoitusOMa
     {
         static void Main(string[] args)
         {
+            string tiedosto = "C:\\Temp\\Lämpötila.txt";
+            //luetaan tiedostosta aiemmin asetettu lämpötila
+            if (File.Exists(tiedosto))
+            {
+                string aiempiarvo = File.ReadAllText(tiedosto);
+                Console.WriteLine("Aiemmin asetettu lämpötila on: "+aiempiarvo+" astetta");
+            }
+
             int lämpötila = 0;
                 Console.Write("Anna uusi lämpötila: ");
             string syöte = Console.ReadLine();
